@@ -11,12 +11,12 @@ export class CourseCardComponent {
     required: true, //by default is false, so this will will make our input required when set to true, if we don't provide it it will give compilation error instead of runtime error
   })
   course: Course;
-  @Output()
-  courseSelected = new EventEmitter<Course>();
+  @Output("courseSelected")
+  courseEmmiter = new EventEmitter<Course>();
 
   constructor() {}
   onCourseViewed() {
     console.log("course card clicked...");
-    this.courseSelected.emit(this.course);
+    this.courseEmmiter.emit(this.course);
   }
 }
