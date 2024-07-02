@@ -1,21 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {COURSES} from '../db-data';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  data = {
-    title: 'native angular course',
-  };
-  onHelloClick() {
-    alert('text clicked');
-  }
-  onKeyUp(currentValue: string) {
-    this.data.title = currentValue;
-  }
+
+
+
 }
