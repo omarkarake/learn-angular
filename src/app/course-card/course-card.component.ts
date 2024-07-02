@@ -11,4 +11,7 @@ export class CourseCardComponent {
     required: true, //by default is false, so this will will make our input required when set to true, if we don't provide it it will give compilation error instead of runtime error
   })
   course: Course;
+  onCourseViewed() {
+    console.log("course card clicked...");
+  }
 }
