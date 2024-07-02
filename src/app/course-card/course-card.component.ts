@@ -1,3 +1,4 @@
+import { Course } from './../model/course';
 import { Component, Input } from "@angular/core";
 
 @Component({
@@ -7,5 +8,5 @@ import { Component, Input } from "@angular/core";
 })
 export class CourseCardComponent {
   @Input()
-  title: string;
+  course: Course;
 }
