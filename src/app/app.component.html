@@ -227,7 +227,12 @@
       </svg>
       <h1 (click)="onHelloClick()">Hello, {{ data.title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-      <input class="demo" value="Text"/>
+      <input
+        class="demo"
+        (keyup)="onKeyUp(titleInput.value)"
+        [value]="data.title"
+        #titleInput
+      />
     </div>
   </div>
 </main>

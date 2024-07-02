@@ -15,4 +15,7 @@ export class AppComponent {
   onHelloClick() {
     alert('text clicked');
   }
+  onKeyUp(currentValue: string) {
+    this.data.title = currentValue;
+  }
 }
