@@ -6,14 +6,14 @@
 </div>
 <div class="courses">
   @for(course of courses; track course.id; let index = $index; let count =
-  $count; let first = $first; let last = $last; let even = $even; let odd =
+  $count; let last = $last; let even = $even; let odd =
   $odd){
   <h1>count is: {{ count }}</h1>
   <course-card
     [index]="index"
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
-    [class.is-first]="first"
+    [class.is-first]="$first"
     [class.is-last]="last"
     [class.is-even]="even"
     [class.is-odd]="odd"
