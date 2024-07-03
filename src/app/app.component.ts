@@ -8,9 +8,13 @@ import { Course } from "./model/course";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  courses = [...COURSES];//if we don't have anything it will display the @empty feature stament
+  courses = [...COURSES]; //if we don't have anything it will display the @empty feature stament
 
   onCourseSelected(course: Course) {
     console.log("card clicked", course);
+  }
+
+  trackCourse(index: number, course: Course) {
+    return course.id;
   }
 }
