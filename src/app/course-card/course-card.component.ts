@@ -16,6 +16,7 @@ export class CourseCardComponent {
 
   @Input({ required: true }) index: number;
 
+  @Input() cardIndex: number;
   constructor() {}
   onCourseViewed() {
     console.log("course card clicked...");

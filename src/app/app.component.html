@@ -5,7 +5,7 @@
   />
 </div>
 <div class="courses">
-  @for(course of courses; track $index; let index = $index; let count =
+  <!-- @for(course of courses; track $index; let index = $index; let count =
   $count; let last = $last; let even = $even; let odd = $odd){
   <h1>count is: {{ count }}</h1>
   <course-card
@@ -18,6 +18,12 @@
     [class.is-odd]="odd"
   />
   } @empty {
-  <h1>no content available...</h1>
-  }
+    <h1>no content available...</h1>
+    } -->
+  <course-card
+    *ngFor="let course of courses; index as i"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course"
+    [cardIndex]="i + 1"
+  />
 </div>
