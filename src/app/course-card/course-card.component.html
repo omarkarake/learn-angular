@@ -3,12 +3,16 @@
   <!-- <div class="course-title">{{ index }} {{ course.description }}</div> -->
   <div class="course-title">{{ course.description }}</div>
   <img
-  width="300"
-  alt="Angular Logo"
-  *ngIf="isImageAvailable()"
-  [src]="course.iconUrl"
+    width="300"
+    alt="Angular Logo"
+    *ngIf="isImageAvailable(); else noImage"
+    [src]="course.iconUrl"
   />
-  
+
+  <ng-template #noImage>
+    <p>No image available...</p>
+  </ng-template>
+
   <div class="course-description">
     {{ course.longDescription }}
   </div>
