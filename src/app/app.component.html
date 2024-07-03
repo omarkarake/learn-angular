@@ -6,9 +6,8 @@
 </div>
 <div class="courses">
   @for(course of courses; track course.id){
-  <course-card
-    (courseSelected)="onCourseSelected($event)"
-    [course]="course"
-  />
+  <course-card (courseSelected)="onCourseSelected($event)" [course]="course" />
+  } @empty {
+  <h1>no content available...</h1>
   }
 </div>
