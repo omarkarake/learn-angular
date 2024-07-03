@@ -5,7 +5,9 @@
   />
 </div>
 <div class="courses">
-  @for(course of courses; track course.id; let index = $index){
+  @for(course of courses; track course.id; let index = $index; let count =
+  $count){
+  <h1>count is: {{ count }}</h1>
   <course-card
     [index]="index"
     (courseSelected)="onCourseSelected($event)"
