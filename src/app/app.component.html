@@ -5,7 +5,7 @@
   />
 </div>
 <div class="courses">
-  @for(course of courses; track course; let index = $index; let count =
+  @for(course of courses; track $index; let index = $index; let count =
   $count; let last = $last; let even = $even; let odd = $odd){
   <h1>count is: {{ count }}</h1>
   <course-card
