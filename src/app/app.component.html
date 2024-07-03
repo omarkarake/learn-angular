@@ -12,6 +12,8 @@
     [index]="index"
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
+    [class.is-first]="first"
+    [class.is-last]="last"
   />
   } @empty {
   <h1>no content available...</h1>
