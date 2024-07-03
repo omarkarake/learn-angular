@@ -22,4 +22,7 @@ export class CourseCardComponent {
     console.log("course card clicked...");
     this.courseEmmiter.emit(this.course);
   }
+  isImageAvailable() {
+    return this.course && this.course.iconUrl;
+  }
 }
