@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter, input } from "@angular/core";
 import { Course } from "./../model/course";
 
 @Component({
@@ -13,6 +13,8 @@ export class CourseCardComponent {
   course: Course;
   @Output("courseSelected")
   courseEmmiter = new EventEmitter<Course>();
+
+  @Input({ required: true }) index: number;
 
   constructor() {}
   onCourseViewed() {
