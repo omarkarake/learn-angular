@@ -1,23 +1,23 @@
 <!-- the good and most consize way is to use *ngIf at the parrent div -->
-<div class="course-card" *ngIf="course">
-  <!-- <div class="course-title">{{ index }} {{ course.description }}</div> -->
-  <div class="course-title">{{ course.description }}</div>
-  <img
-    width="300"
-    alt="Angular Logo"
-    *ngIf="isImageAvailable(); else noImage"
-    [src]="course.iconUrl"
-  />
-
-  <ng-template #noImage>
-    <p>No image available...</p>
-  </ng-template>
-
-  <div class="course-description">
-    {{ course.longDescription }}
+@if (course) {
+  <div class="course-card">
+    <!-- <div class="course-title">{{ index }} {{ course.description }}</div> -->
+    <div class="course-title">{{ course.description }}</div>
+    @if (isImageAvailable()) {
+      <img
+        width="300"
+        alt="Angular Logo"
+        [src]="course.iconUrl"
+        />
+    } @else {
+      <p>No image available...</p>
+    }
+    <div class="course-description">
+      {{ course.longDescription }}
+    </div>
+    <button (click)="onCourseViewed()">View Card</button>
   </div>
-  <button (click)="onCourseViewed()">View Card</button>
-</div>
+}
 
 <!-- one solution if we have undefined course object, is to use elvis operator: ? -->
 <!-- <div class="course-title">{{ course?.description }}</div> -->
