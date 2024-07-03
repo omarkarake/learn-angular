@@ -6,7 +6,7 @@
 </div>
 <div class="courses">
   @for(course of courses; track course.id; let index = $index; let count =
-  $count){
+  $count; let first = $first; let last = $last){
   <h1>count is: {{ count }}</h1>
   <course-card
     [index]="index"
